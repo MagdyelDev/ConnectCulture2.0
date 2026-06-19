@@ -74,5 +74,3 @@ db.run(`
         console.log("Tabela curiosidades criada!");
     }
 });
-
-// Iniciando o servidor
