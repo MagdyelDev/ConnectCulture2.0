@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <h2>Turismo<br>Admin</h2>
+
+        <ul>
+            <li onclick="mostrarSecao('cidades')">
+                 Cidades
+            </li>
+
+            <li onclick="mostrarSecao('pontos')">
+                Pontos Turísticos
+            </li>
+
+            <li onclick="mostrarSecao('curiosidades')">
+                 Curiosidades
+            </li>
+        </ul>
+
+    </aside>
+
+
+    <!-- CONTEÚDO -->
+    <main>
+
+        <header>
+
+            <div>
+                <h1>Painel Administrativo</h1>
+                <p>Vale do Pajeú e Vale do Moxotó</p>
+            </div>
+
+            <div class="admin">
+                Administrador
+            </div>
+
+        </header>
+
+
+        <!-- CIDADES -->
+        <section class="card" id="cidades">
+
+            <div class="topo">
+                <h2>Cidades</h2>
+
+                <button onclick="abrirModal('cidade')">
+                    + Adicionar Cidade
+                </button>
+            </div>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Município</th>
+                        <th>UF</th>
+                        <th>Região</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Serra Talhada</td>
+                        <td>PE</td>
+                        <td>Vale do Pajeú</td>
+                        <td>
+                            <button class="editar">✏</button>
+                            <button class="remover">🗑</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Triunfo</td>
+                        <td>PE</td>
+                        <td>Vale do Pajeú</td>
+                        <td>
+                            <button class="editar">✏</button>
+                            <button class="remover">🗑</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Sertânia</td>
+                        <td>PE</td>
+                        <td>Vale do Moxotó</td>
+                        <td>
+                            <button class="editar">✏</button>
+                            <button class="remover">🗑</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Ibimirim</td>
+                        <td>PE</td>
+                        <td>Vale do Moxotó</td>
+                        <td>
+                            <button class="editar">✏</button>
+                            <button class="remover">🗑</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- PONTOS -->
+        <section class="card oculto" id="pontos">
+
+            <div class="topo">
+
+                <h2>Pontos Turísticos</h2>
+
+                <button onclick="abrirModal('ponto')">
+                    + Adicionar Ponto
+                </button>
+
+            </div>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Cidade</th>
+                        <th>Ponto Turístico</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Triunfo</td>
+                        <td>Teleférico de Triunfo</td>
+                        <td>
+                            <button class="editar">✏</button>
+                            <button class="remover">🗑</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Serra Talhada</td>
+                        <td>Museu do Cangaço</td>
+                        <td>
+                            <button class="editar">✏</button>
+                            <button class="remover">🗑</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Ibimirim</td>
+                        <td>Açude Poço da Cruz</td>
+                        <td>
+                            <button class="editar">✏</button>
+                            <button class="remover">🗑</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- CURIOSIDADES -->
+        <section class="card oculto" id="curiosidades">
+
+            <div class="topo">
+
+                <h2>Curiosidades</h2>
+
+                <button onclick="abrirModal('curiosidade')">
+                    + Adicionar Curiosidade
+                </button>
+
+            </div>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Ponto</th>
+                        <th>Curiosidade</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Teleférico de Triunfo</td>
+                        <td>Um dos poucos teleféricos do Nordeste.</td>
+                        <td>
+                            <button class="editar">✏</button>
+                            <button class="remover">🗑</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Museu do Cangaço</td>
+                        <td>Conta a história de Lampião.</td>
+                        <td>
+                            <button class="editar">✏</button>
+                            <button class="remover">🗑</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <!-- MODAL -->
+    <div class="overlay" id="overlay">
+
+        <div class="modal">
+
+            <div class="modal-topo">
+
+                <h2 id="tituloModal">
+                    Adicionar
+                </h2>
+
+                <button class="fechar" onclick="fecharModal()">
+                    ✕
+                </button>
+
+            </div>
+
+            <div class="campos" id="camposModal">
+            </div>
+
+            <div class="botoes-modal">
+
+                <button class="cancelar" onclick="fecharModal()">
+                    Cancelar
+                </button>
+
+                <button class="salvar">
+                    Salvar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
