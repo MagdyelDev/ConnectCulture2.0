@@ -14,3 +14,7 @@ CREATE TABLE PontoTuristico (
     cidade_id INT,
     FOREIGN KEY (cidade_id) REFERENCES Cidade(id_cidade)
 );
+
+create 
+
+

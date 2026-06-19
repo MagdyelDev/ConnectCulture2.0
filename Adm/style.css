@@ -1,0 +1,225 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    display:flex;
+    background:#081624;
+    color:white;
+}
+
+/* Sidebar */
+
+.sidebar{
+    width:220px;
+    min-height:100vh;
+    background:#05111d;
+    padding:30px;
+}
+
+.sidebar h2{
+    margin-bottom:50px;
+    line-height:1.2;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    padding:15px 0;
+    cursor:pointer;
+    color:#d8d8d8;
+    transition:.3s;
+}
+
+.sidebar li:hover{
+    color:#1ed760;
+}
+
+/* Conteúdo */
+
+main{
+    flex:1;
+    padding:40px;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+header p{
+    color:#9ba9b9;
+    margin-top:8px;
+}
+
+.admin{
+    background:#10243d;
+    padding:14px 20px;
+    border-radius:12px;
+}
+
+/* Cards */
+
+.card{
+    background:#0d2035;
+    border-radius:20px;
+    padding:25px;
+}
+
+.oculto{
+    display:none;
+}
+
+.topo{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.topo button{
+    background:#18c964;
+    border:none;
+    color:white;
+    padding:12px 18px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* Tabela */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    text-align:left;
+    padding:18px;
+    color:#d9d9d9;
+}
+
+td{
+    padding:18px;
+    border-top:1px solid #1b3552;
+}
+
+.editar{
+    background:#2979ff;
+}
+
+.remover{
+    background:#ff4c4c;
+}
+
+.editar,
+.remover{
+    border:none;
+    color:white;
+    width:40px;
+    height:40px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* Modal */
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.7);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+.modal{
+    width:500px;
+    background:#10243d;
+    border-radius:20px;
+    padding:30px;
+    animation:aparecer .2s;
+}
+
+@keyframes aparecer{
+    from{
+        transform:scale(.9);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.modal-topo{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.fechar{
+    background:none;
+    border:none;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+}
+
+.campo{
+    margin-bottom:20px;
+}
+
+.campo label{
+    display:block;
+    margin-bottom:8px;
+}
+
+.campo input,
+.campo textarea,
+.campo select{
+    width:100%;
+    background:#081624;
+    color:white;
+    border:1px solid #203d5b;
+    border-radius:12px;
+    padding:15px;
+}
+
+.campo textarea{
+    resize:none;
+    height:100px;
+}
+
+.botoes-modal{
+    margin-top:25px;
+    display:flex;
+    justify-content:flex-end;
+    gap:10px;
+}
+
+.cancelar{
+    background:#39485a;
+}
+
+.salvar{
+    background:#18c964;
+}
+
+.cancelar,
+.salvar{
+    border:none;
+    color:white;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+}
